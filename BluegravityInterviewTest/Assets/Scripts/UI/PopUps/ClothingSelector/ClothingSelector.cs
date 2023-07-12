@@ -1,6 +1,7 @@
 using BluegravityInterviewTest.Core;
 using BluegravityInterviewTest.Core.Charapter;
 using BluegravityInterviewTest.UI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,30 +10,56 @@ using UnityEngine.UI;
 
 namespace BluegravityInterviewTest
 {
-    public class ClothingSelector : PopUp
+    public class ClothingSelector : MonoBehaviour
     {
-        [SerializeField]private List<ClothingItem> _selectedItems;
-        [SerializeField]private Button _updateButton;
+        [SerializeField] private List<string> _selectedItems;
+        [SerializeField] private List<string> _items;
+        [SerializeField] private GameObject _cloathingItemSource;
+        [SerializeField] private Transform _content;
+        private bool _filling ;
+        public List<string> SelectedItems { get { return _selectedItems; } }
 
         private void OnEnable()
         {
-            _selectedItems = new List<ClothingItem>();
+            _selectedItems = new List<string>();
+            //_items = new List<ClothingItem>();
         }
-        private void Update()
+        public void ItemTrigger(ClothingItem item)
         {
-            //if (_selectedItems.SequenceEqual(Player.PlayerItems.Car) )
-            _updateButton.interactable = !_selectedItems.ToHashSet().SetEquals(Player.PlayerItems.Car.ToHashSet());
+            Debug.Log("ItemTrigger");
+            if (_selectedItems.Contains(item.ID))
+                _selectedItems.Remove(item.ID);
+            else _selectedItems.Add(item.ID);
         }
-        protected override void ItemHander(ClothingItem item)
+        //private IEnumerator Fill(List<ClothingItem> clothingItems)
+        //{
+        //    Debug.Log("Fill called");
+        //    ClearContent();
+        //    yield return new WaitUntil(() => _content.childCount == 0 && !_filling);
+        //    _filling = true;
+        //    foreach (ClothingItem item in clothingItems)
+        //    {
+        //        if (item != null)
+        //        {
+        //            Instantiate(item, _content);
+        //        }
+        //    }
+        //    _filling = false;
+        //}
+        public void CreateItem(string id, bool isForSell = false)
         {
-            base.ItemHander(item);
-            if (_selectedItems.Contains(item))
-                _selectedItems.Remove(item);
-            else _selectedItems.Add(item);
+            var item = Instantiate(_cloathingItemSource, _content).GetComponent<ClothingItem>();
+            item.Set(id, isForSell);
+            _items.Add(item.ID);
         }
-        public void UpdateSelectedItems()
+
+        public void ClearContent()
         {
-            GameObject.FindGameObjectWithTag("ClothingShop").GetComponent<ClothingShop>().UpdateItems(_selectedItems);
+            _selectedItems = new List<string>();
+            foreach (Transform item in _content)
+            {
+                Destroy(item.gameObject);
+            }
         }
     }
 }

@@ -31,7 +31,7 @@ namespace BluegravityInterviewTest.UI
 
         public void Hide()
         {
-            transform.LeanScale(Vector2.zero, .3f).setEaseInSine().setOnComplete(() => { Destroy(gameObject); });
+            transform.LeanScale(Vector2.zero, .7f).setEaseInSine().setOnComplete(() => { Destroy(gameObject, 1); });
         }
     }
 }

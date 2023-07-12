@@ -19,20 +19,21 @@ namespace BluegravityInterviewTest.UI
         }
         public void Show(string name)
         {
-            HidePopups();
+            //HidePopups();
             if (_popUps.TryGetValue(name, out PopUp popup))
             {
                 popup.Show();
             }
         }
-        public void HidePopups()
-        {
-            if(_popUps.Count > 0)
-            foreach (var popUp in _popUps)
-            {
-                popUp.Value.Hide();
-            }
-        }
+        //public void HidePopups()
+        //{
+        //    foreach (var popUp in _popUps)
+        //    {
+        //        if (popUp.Value.gameObject.activeSelf)
+        //            popUp.Value.Hide();
+        //    }
+
+        //}
 
     }
 }

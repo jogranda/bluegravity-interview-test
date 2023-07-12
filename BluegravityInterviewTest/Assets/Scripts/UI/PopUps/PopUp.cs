@@ -2,25 +2,33 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace BluegravityInterviewTest.UI
 {
     public class PopUp : MonoBehaviour
     {
-        internal void Show()
+        [SerializeField] private Button Close;
+
+        private void Start()
         {
-            gameObject.LeanScale(Vector3.one, .4f);
+            Close.onClick.AddListener(() => { Hide(); });
         }
-        internal void Hide()
+        internal virtual void Show()
         {
-            gameObject.LeanScale(Vector3.zero, .4f);
+            Close.interactable = false;
+            StopAllCoroutines();
+            gameObject.SetActive(true);
+            gameObject.LeanScale(Vector3.one, .5f).setOnComplete(() => Close.interactable = true);
+        }
+        internal virtual void Hide()
+        {
+            gameObject.LeanScale(Vector3.zero, .1f).setOnComplete(() => 
+            {
+                Close.interactable = true;
+                gameObject.SetActive(false);
+            });
         }
 
-        protected virtual void ItemHander(ClothingItem item) { }
-
-        public void ItemTrigger(ClothingItem item)
-        {
-            ItemHander(item);
-        }
     }
 }

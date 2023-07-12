@@ -13,7 +13,6 @@ namespace BluegravityInterviewTest
             if (collision.gameObject.tag.Equals("Player"))
             {
                 _currentActionBox = ActionBoxes.Instance.Create("Press space to select clothes").GetComponent<ActionBox>();
-                _currentActionBox.SetTrigger(Handler);
             }
         }
 
@@ -26,19 +25,6 @@ namespace BluegravityInterviewTest
             }
         }
 
-        private void FixedUpdate()
-        {
-            if (Input.GetKey(KeyCode.Space))
-            {
-                if (_currentActionBox != null)
-                    Handler();
-            }
-        }
-
-        protected virtual void Handler()
-        {
-            _currentActionBox.transform.LeanScale(Vector3.one * .8f, .5f).setEaseOutBack().setOnComplete(() => { _currentActionBox.Hide(); });
-        }
-
+       
     }
 }

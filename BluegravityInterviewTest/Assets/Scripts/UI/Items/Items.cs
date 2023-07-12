@@ -12,18 +12,24 @@ namespace BluegravityInterviewTest.UI.Items
     {
         [SerializeField] private TMP_Text _cashCount;
         [SerializeField] private TMP_Text _carCount;
+        [SerializeField] private TMP_Text _inventory;
         public static Items Instance { get; private set; }
         private void Awake()
         {
             Instance = this;
         }
-        public void SetCash(int cash)
+        public void UpdateCarLabel(int cash)
         {
             _carCount.text = cash.ToString();
         }
-        public void SetCar(int cash)
+        public void SetInventoryLabel(int inventory)
         {
-            _carCount.text = cash.ToString();
+            _inventory.text = inventory.ToString();
+        }
+
+        internal void UpdateCashLabel(int count)
+        {
+            _cashCount.text = count.ToString();
         }
     }
 }
