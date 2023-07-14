@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,7 +21,7 @@ namespace BluegravityInterviewTest.UI
         }
         public void Show(string message, Sprite charapterImage)
         {
-            SetDiag( message, charapterImage);
+            SetDiag(message, charapterImage);
             transform.LeanScale(Vector2.one, 1).setEaseOutBack();
         }
 

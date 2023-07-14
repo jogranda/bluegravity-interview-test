@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +8,7 @@ namespace BluegravityInterviewTest.Core
         private static List<Clothing> list;
         public static List<Clothing> GetClotingList()
         {
-            if(list == null)
+            if (list == null)
             {
                 list = new List<Clothing>()
                 {

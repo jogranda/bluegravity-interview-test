@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace BluegravityInterviewTest.Core
@@ -10,7 +8,7 @@ namespace BluegravityInterviewTest.Core
         public int Price { get; private set; }
         public string Type { get; private set; }
         public Color Color { get; private set; }
-        public Clothing(string id, int price, string type, Color color) 
+        public Clothing(string id, int price, string type, Color color)
         {
             Id = id;
             Price = price;

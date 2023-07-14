@@ -1,13 +1,8 @@
 using BluegravityInterviewTest.UI;
 using BluegravityInterviewTest.UI.Items;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
 namespace BluegravityInterviewTest.Core
 {
@@ -43,7 +38,7 @@ namespace BluegravityInterviewTest.Core
             float horizontalMovement = Input.GetAxis("Horizontal");
             float verticalMovement = Input.GetAxis("Vertical");
             _isMoving = false;
-            if(horizontalMovement != 0 || verticalMovement != 0)
+            if (horizontalMovement != 0 || verticalMovement != 0)
             {
                 _isMoving = true;
                 if (horizontalMovement > 0)
@@ -69,7 +64,7 @@ namespace BluegravityInterviewTest.Core
                 case "Door":
                     if (_currentTriggered.gameObject.transform.parent.TryGetComponent(out Build build))
                     {
-                        if (_inRoom) 
+                        if (_inRoom)
                             ActionBoxes.Instance.Create(build.name + " (press space to exit)", 1.5f);
                         else
                             ActionBoxes.Instance.Create(build.name + " (press space to enter)", 1.5f);
@@ -102,11 +97,11 @@ namespace BluegravityInterviewTest.Core
                     _isHandlered = true;
                     Handler();
                 }
-            else
-                _isHandlered = false;
+                else
+                    _isHandlered = false;
             _upperClothing.color = ClothingList.GetClotingList().FirstOrDefault(clothing => clothing.Id.Equals(PlayerData.UpperClothingId)).Color;
-            if(PlayerData.BottomClothingId != null) 
-            _bottomClothing.color = ClothingList.GetClotingList().FirstOrDefault(clothing => clothing.Id.Equals(PlayerData.BottomClothingId)).Color;
+            if (PlayerData.BottomClothingId != null)
+                _bottomClothing.color = ClothingList.GetClotingList().FirstOrDefault(clothing => clothing.Id.Equals(PlayerData.BottomClothingId)).Color;
         }
 
         protected virtual void Handler()

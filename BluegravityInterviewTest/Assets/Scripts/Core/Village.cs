@@ -1,10 +1,7 @@
-using BluegravityInterviewTest.Core;
 using BluegravityInterviewTest.UI;
 using BluegravityInterviewTest.UI.Items;
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,13 +20,13 @@ namespace BluegravityInterviewTest.Core
         private void Start()
         {
             //InitializeWorld();
-            if(FindObjectOfType<Player>() == null)
+            if (FindObjectOfType<Player>() == null)
             {
                 Instantiate(_playerSource);
             }
             Items.Instance.UpdateItems();
-            if(!Player.InstructionsShowed)
-            StartCoroutine("ShowInstructions");
+            if (!Player.InstructionsShowed)
+                StartCoroutine("ShowInstructions");
         }
 
         private IEnumerator ShowInstructions()
@@ -42,15 +39,15 @@ namespace BluegravityInterviewTest.Core
         }
         public void EnterBuild(Build build)
         {
-            if(build.Id == BuildingNames.BuildingNamesList[0].Key)
+            if (build.Id == BuildingNames.BuildingNamesList[0].Key)
             {
                 SceneManager.LoadScene(1);
             }
-            if(build.Id == BuildingNames.BuildingNamesList[1].Key)
+            if (build.Id == BuildingNames.BuildingNamesList[1].Key)
             {
                 SceneManager.LoadScene(2);
             }
-           
+
         }
     }
 }

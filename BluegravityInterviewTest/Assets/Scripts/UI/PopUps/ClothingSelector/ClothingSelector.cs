@@ -1,11 +1,6 @@
-using BluegravityInterviewTest.Core;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace BluegravityInterviewTest.UI
 {
@@ -32,12 +27,13 @@ namespace BluegravityInterviewTest.UI
         }
         public void ItemTrigger(ClothingItem item)
         {
-            if(_selectionMultiple)
+            if (_selectionMultiple)
             {
                 if (_selectedItems.Contains(item.ID))
                     _selectedItems.Remove(item.ID);
                 else _selectedItems.Add(item.ID);
-            } else
+            }
+            else
             {
                 if (_selectedItems.Contains(item.ID))
                 {

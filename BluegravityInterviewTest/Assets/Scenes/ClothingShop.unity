@@ -427,7 +427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &258921294
 RectTransform:
   m_ObjectHideFlags: 0
@@ -787,10 +787,10 @@ RectTransform:
   m_Father: {fileID: 525951126}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.365, y: -25}
-  m_SizeDelta: {x: 380.73, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &341992983
 MonoBehaviour:
@@ -1368,10 +1368,10 @@ RectTransform:
   m_Father: {fileID: 448714203}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.365, y: -100.44349}
-  m_SizeDelta: {x: 380.73, y: 53.3185}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 53.3185}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &525951127
 MonoBehaviour:
@@ -1612,8 +1612,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -100, y: 259.74042}
-  m_SizeDelta: {x: 200, y: -519.4808}
+  m_AnchoredPosition: {x: -100, y: 357.4696}
+  m_SizeDelta: {x: 200, y: -714.9391}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &691821467
 MonoBehaviour:
@@ -2209,10 +2209,10 @@ RectTransform:
   m_Father: {fileID: 1554739167}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.365, y: -27.2305}
-  m_SizeDelta: {x: 380.73, y: 54.461}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &959371674
 MonoBehaviour:
@@ -2555,10 +2555,10 @@ RectTransform:
   m_Father: {fileID: 1694787762}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 285.54752, y: -19.255}
-  m_SizeDelta: {x: 190.365, y: 38.51}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 38.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1121667073
 MonoBehaviour:
@@ -3387,7 +3387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1369814699208232885, guid: c85a7603662824f4da9f88e9272d80a6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1369814699208232885, guid: c85a7603662824f4da9f88e9272d80a6, type: 3}
       propertyPath: m_AnchorMin.x
@@ -3395,11 +3395,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1369814699208232885, guid: c85a7603662824f4da9f88e9272d80a6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1369814699208232885, guid: c85a7603662824f4da9f88e9272d80a6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 380.73
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1369814699208232885, guid: c85a7603662824f4da9f88e9272d80a6, type: 3}
       propertyPath: m_SizeDelta.y
@@ -3435,11 +3435,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1369814699208232885, guid: c85a7603662824f4da9f88e9272d80a6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 190.365
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1369814699208232885, guid: c85a7603662824f4da9f88e9272d80a6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -253.77829
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1369814699208232885, guid: c85a7603662824f4da9f88e9272d80a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3487,7 +3487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1369814699392496977, guid: c85a7603662824f4da9f88e9272d80a6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 60960.957
+      value: 10532.681
       objectReference: {fileID: 0}
     - target: {fileID: 1369814699620643957, guid: c85a7603662824f4da9f88e9272d80a6, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3661,10 +3661,10 @@ RectTransform:
   m_Father: {fileID: 448714203}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.365, y: -407.68433}
-  m_SizeDelta: {x: 380.73, y: 54.461}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 54.461}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1554739168
 MonoBehaviour:
@@ -3729,10 +3729,10 @@ RectTransform:
   m_Father: {fileID: 1694787762}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 95.1825, y: -19.255}
-  m_SizeDelta: {x: 190.365, y: 38.51}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 38.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1596197953
 MonoBehaviour:
@@ -4010,10 +4010,10 @@ RectTransform:
   m_Father: {fileID: 448714203}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.365, y: -33.225}
-  m_SizeDelta: {x: 380.73, y: 66.45}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 66.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1694787763
 MonoBehaviour:
@@ -4092,7 +4092,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
@@ -4655,7 +4655,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 7.73, y: 6.15}
+  m_Size: {x: 7.73, y: 10.27}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4693,10 +4693,10 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -2.92}
   m_SpriteTilingProperty:
-    border: {x: 0.6875, y: 0.71875, z: 0.6875, w: 1.875}
+    border: {x: 0.6875, y: 2.9375, z: 0.6875, w: 4.28125}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.5, y: 9.375}
-    newSize: {x: 7.73, y: 6.15}
+    oldSize: {x: 16, y: 16}
+    newSize: {x: 7.73, y: 10.27}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
@@ -4719,10 +4719,10 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 3.64, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.6875, y: 0.71875, z: 0.6875, w: 1.875}
+    border: {x: 0.6875, y: 2.9375, z: 0.6875, w: 4.28125}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.5, y: 9.375}
-    newSize: {x: 7.73, y: 6.15}
+    oldSize: {x: 16, y: 16}
+    newSize: {x: 7.73, y: 10.27}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
@@ -4745,10 +4745,10 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -3.67, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.6875, y: 0.71875, z: 0.6875, w: 1.875}
+    border: {x: 0.6875, y: 2.9375, z: 0.6875, w: 4.28125}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.5, y: 9.375}
-    newSize: {x: 7.73, y: 6.15}
+    oldSize: {x: 16, y: 16}
+    newSize: {x: 7.73, y: 10.27}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
@@ -4771,10 +4771,10 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.013178468, y: 2.3}
   m_SpriteTilingProperty:
-    border: {x: 0.6875, y: 0.71875, z: 0.6875, w: 1.875}
+    border: {x: 0.6875, y: 2.9375, z: 0.6875, w: 4.28125}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.5, y: 9.375}
-    newSize: {x: 7.73, y: 6.15}
+    oldSize: {x: 16, y: 16}
+    newSize: {x: 7.73, y: 10.27}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0

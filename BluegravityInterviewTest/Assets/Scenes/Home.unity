@@ -1157,8 +1157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -100, y: 259.74042}
-  m_SizeDelta: {x: 200, y: -519.4808}
+  m_AnchoredPosition: {x: -100, y: 357.4696}
+  m_SizeDelta: {x: 200, y: -714.9391}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &691821467
 MonoBehaviour:
@@ -2082,7 +2082,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
@@ -2742,7 +2742,7 @@ GameObject:
   - component: {fileID: 2000706901}
   - component: {fileID: 2000706905}
   m_Layer: 0
-  m_Name: Build
+  m_Name: Home
   m_TagString: ClothingShop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2794,7 +2794,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 7.73, y: -5.86}
+  m_Size: {x: 7.73, y: -10.04}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2832,10 +2832,10 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -2.76}
   m_SpriteTilingProperty:
-    border: {x: 0.6875, y: 0.71875, z: 0.6875, w: 1.875}
+    border: {x: 0.6875, y: 2.9375, z: 0.6875, w: 4.28125}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.5, y: 9.375}
-    newSize: {x: 7.73, y: -5.86}
+    oldSize: {x: 16, y: 16}
+    newSize: {x: 7.73, y: -10.04}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
@@ -2858,10 +2858,10 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 3.64, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.6875, y: 0.71875, z: 0.6875, w: 1.875}
+    border: {x: 0.6875, y: 2.9375, z: 0.6875, w: 4.28125}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.5, y: 9.375}
-    newSize: {x: 7.73, y: -5.86}
+    oldSize: {x: 16, y: 16}
+    newSize: {x: 7.73, y: -10.04}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
@@ -2884,10 +2884,10 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -3.67, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.6875, y: 0.71875, z: 0.6875, w: 1.875}
+    border: {x: 0.6875, y: 2.9375, z: 0.6875, w: 4.28125}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.5, y: 9.375}
-    newSize: {x: 7.73, y: -5.86}
+    oldSize: {x: 16, y: 16}
+    newSize: {x: 7.73, y: -10.04}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
@@ -2910,10 +2910,10 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.013178468, y: 2.14}
   m_SpriteTilingProperty:
-    border: {x: 0.6875, y: 0.71875, z: 0.6875, w: 1.875}
+    border: {x: 0.6875, y: 2.9375, z: 0.6875, w: 4.28125}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.5, y: 9.375}
-    newSize: {x: 7.73, y: -5.86}
+    oldSize: {x: 16, y: 16}
+    newSize: {x: 7.73, y: -10.04}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0

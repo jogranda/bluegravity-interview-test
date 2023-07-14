@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,13 +5,13 @@ namespace BluegravityInterviewTest.UI
 {
     public class PopUps : MonoBehaviour
     {
-        private Dictionary<string,PopUp> _popUps;
+        private Dictionary<string, PopUp> _popUps;
         public static PopUps Instance;
         private void Awake()
         {
             Instance = this;
             _popUps = new Dictionary<string, PopUp>();
-            foreach (Transform child in transform) 
+            foreach (Transform child in transform)
             {
                 _popUps.Add(child.gameObject.name, child.gameObject.GetComponent<PopUp>());
             }

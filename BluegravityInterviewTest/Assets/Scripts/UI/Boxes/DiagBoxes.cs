@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace BluegravityInterviewTest.UI
@@ -12,7 +10,7 @@ namespace BluegravityInterviewTest.UI
 
         private void Awake()
         {
-             Instance = this;
+            Instance = this;
         }
         public GameObject Create(string message, Sprite sprite = null)
         {

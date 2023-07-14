@@ -1,11 +1,5 @@
-using BluegravityInterviewTest.UI;
 using BluegravityInterviewTest.UI.Items;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Unity.VisualScripting;
-using UnityEngine;
 
 namespace BluegravityInterviewTest.Core
 {
@@ -27,7 +21,7 @@ namespace BluegravityInterviewTest.Core
         public void UpdateCash(int cash)
         {
             Cash = cash;
-            Items.Instance.UpdateItems(); 
+            Items.Instance.UpdateItems();
 
         }
         public void SetClothing(string upperId, string bottomId)
@@ -40,8 +34,8 @@ namespace BluegravityInterviewTest.Core
             InventoryIds.Clear();
             foreach (var id in itemsIds)
             {
-                if(!InventoryIds.Contains(id) && !id.Equals("default"))
-                InventoryIds.Add(id);
+                if (!InventoryIds.Contains(id) && !id.Equals("default"))
+                    InventoryIds.Add(id);
             }
             Items.Instance.UpdateItems();
 
@@ -51,7 +45,7 @@ namespace BluegravityInterviewTest.Core
             CarIds.Clear();
             foreach (var id in itemsIds)
             {
-                if(!CarIds.Contains(id))
+                if (!CarIds.Contains(id))
                     CarIds.Add(id);
             }
             Items.Instance.UpdateItems();

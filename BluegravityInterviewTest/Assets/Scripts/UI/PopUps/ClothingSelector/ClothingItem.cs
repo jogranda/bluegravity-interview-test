@@ -1,12 +1,6 @@
 using BluegravityInterviewTest.Core;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -37,11 +31,11 @@ namespace BluegravityInterviewTest.UI
             _showPrice = showPrice;
             _interactable = true;
             _enable = true;
-            
+
             _priceLabel.text = _price.ToString();
 
             ShowExpo();
-            if(id.Equals("default"))
+            if (id.Equals("default"))
             {
                 gameObject.SetActive(false);
                 return;
@@ -55,7 +49,7 @@ namespace BluegravityInterviewTest.UI
         private void ShowExpo()
         {
             var cloth = ClothingList.GetClotingList().FirstOrDefault(cloth => cloth.Id.Equals(ID));
-            switch(cloth.Type)
+            switch (cloth.Type)
             {
                 case "upper":
                     _upperExpo.gameObject.SetActive(true);
@@ -68,7 +62,7 @@ namespace BluegravityInterviewTest.UI
                 default:
                     break;
             }
-            
+
         }
         private void Update()
         {
@@ -79,10 +73,10 @@ namespace BluegravityInterviewTest.UI
                 _indicator.gameObject.SetActive(true);
                 _indicator.color = new Color(0, 0, 0, 0.3f);
                 return;
-            } 
-                _indicator.color = new Color(0.325f, 0.576f, 0.341f, 0.4745098f);
-                _interactable = true;
-                _indicator.gameObject.SetActive(_clothingSelector.SelectedItems.Contains(ID));
+            }
+            _indicator.color = new Color(0.325f, 0.576f, 0.341f, 0.4745098f);
+            _interactable = true;
+            _indicator.gameObject.SetActive(_clothingSelector.SelectedItems.Contains(ID));
         }
         public void SetEnable(bool condition)
         {

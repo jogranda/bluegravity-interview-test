@@ -1,6 +1,4 @@
 using BluegravityInterviewTest.UI;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace BluegravityInterviewTest
@@ -20,8 +18,8 @@ namespace BluegravityInterviewTest
         {
             if (collision.gameObject.tag.Equals("Player"))
             {
-                if(_currentActionBox != null)
-                _currentActionBox.Hide();
+                if (_currentActionBox != null)
+                    _currentActionBox.Hide();
             }
         }
     }

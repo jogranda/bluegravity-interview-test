@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace BluegravityInterviewTest.UI
@@ -15,7 +13,7 @@ namespace BluegravityInterviewTest.UI
         }
 
         public GameObject Create(string message, float duraction = 0)
-            {
+        {
             GameObject ActionBox = Instantiate(_actionBoxSource, _container);
             ActionBox.GetComponent<ActionBox>().Show(message, duraction);
             return ActionBox;

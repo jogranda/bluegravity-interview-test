@@ -1,15 +1,8 @@
 using BluegravityInterviewTest.Core;
-using BluegravityInterviewTest.UI;
-using BluegravityInterviewTest.UI.Items;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 namespace BluegravityInterviewTest.UI
 {

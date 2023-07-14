@@ -1,16 +1,10 @@
 ﻿using BluegravityInterviewTest.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace BluegravityInterviewTest.UI.Items
 {
-    public class Items : MonoBehaviour 
+    public class Items : MonoBehaviour
     {
         [SerializeField] private TMP_Text _cashCount;
         [SerializeField] private TMP_Text _carCount;

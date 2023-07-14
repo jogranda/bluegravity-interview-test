@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,9 +9,9 @@ namespace BluegravityInterviewTest.UI
 
         private void Start()
         {
-            Close.onClick.AddListener(() => 
+            Close.onClick.AddListener(() =>
             {
-                Hide(); 
+                Hide();
             });
         }
         internal virtual void Show()
@@ -26,7 +23,7 @@ namespace BluegravityInterviewTest.UI
         }
         internal virtual void Hide()
         {
-            gameObject.LeanScale(Vector3.zero, .1f).setOnComplete(() => 
+            gameObject.LeanScale(Vector3.zero, .1f).setOnComplete(() =>
             {
                 Close.interactable = true;
                 gameObject.SetActive(false);
