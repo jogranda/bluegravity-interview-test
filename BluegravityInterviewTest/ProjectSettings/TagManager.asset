@@ -6,9 +6,9 @@ TagManager:
   tags:
   - Door
   - ClothingShop
-  - Wardrobe
   - WardrobeShop
   - Buyer
+  - WardrobeMine
   layers:
   - Default
   - TransparentFX

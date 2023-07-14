@@ -1,5 +1,4 @@
 using BluegravityInterviewTest.Core;
-using BluegravityInterviewTest.Core.Charapter;
 using BluegravityInterviewTest.UI;
 using System;
 using System.Collections;
@@ -8,7 +7,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace BluegravityInterviewTest
+namespace BluegravityInterviewTest.UI
 {
     public class Pickups : PopUp
     {
@@ -26,19 +25,30 @@ namespace BluegravityInterviewTest
             _clothingSelector.ClearContent();
             foreach (var item in ShopItems.ShopItemsDict)
             {
-                _clothingSelector.CreateItem(item.Key);
+                _clothingSelector.CreateItem(item.Key, true);
 
+            }
+
+            if (_clothingSelector.Items.Count == 0) _clothingSelector.ShowMessage("There aren't items here");
+            else
+            {
+                foreach (var item in _clothingSelector.Items)
+                {
+                    if (Player.PlayerData.InventoryIds.Contains(item.ID))
+                    {
+                        item.SetEnable(false);
+                    }
+                }
             }
         }
 
-        public void UpdateSelectedItems()
+        public void UpdateTrigger()
         {
-            GameObject.FindGameObjectWithTag("ClothingShop").GetComponent<ClothingStore>().UpdateCar(_clothingSelector.SelectedItems);
+            GameObject.FindGameObjectWithTag("ClothingShop").GetComponent<ClothingShop>().UpdateCar(_clothingSelector.SelectedItems);
         }
         private void Update()
         {
-            //if (_clothingSelector.SelectedItems.SequenceEqual(Player.PlayerItems.Car))
-                _updateButton.interactable = !_clothingSelector.SelectedItems.ToHashSet().SetEquals(Player.PlayerItems.CarIds.ToHashSet());
+            _updateButton.interactable = !_clothingSelector.SelectedItems.ToHashSet().SetEquals(Player.PlayerData.CarIds.ToHashSet());
         }
     }
 }

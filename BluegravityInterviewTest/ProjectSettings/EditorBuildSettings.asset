@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Village.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Build.unity
+    path: Assets/Scenes/ClothingShop.unity
     guid: c37ff7edbb1db4243baf6225d6182dc4
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: 97d56973d134f1845b5fb8920064ee83
   m_configObjects: {}

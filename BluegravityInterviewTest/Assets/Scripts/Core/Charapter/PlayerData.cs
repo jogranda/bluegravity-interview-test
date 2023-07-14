@@ -3,42 +3,47 @@ using BluegravityInterviewTest.UI.Items;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
-namespace BluegravityInterviewTest.Core.Charapter
+namespace BluegravityInterviewTest.Core
 {
-    public class PlayerItems
+    public class PlayerData
     {
         public int Cash { get; private set; }
         public List<string> CarIds { get; private set; }
         public List<string> InventoryIds { get; private set; }
-        public PlayerItems()
+        public string UpperClothingId { get; private set; }
+        public string BottomClothingId { get; private set; }
+        public PlayerData()
         {
             CarIds = new List<string>();
             InventoryIds = new List<string>();
-            UpdateCash(500);
+            Cash = 500;
+            BottomClothingId = "default";
+            UpperClothingId = "default";
         }
         public void UpdateCash(int cash)
         {
             Cash = cash;
-            Items.Instance.UpdateCashLabel(Cash);
+            Items.Instance.UpdateItems(); 
 
+        }
+        public void SetClothing(string upperId, string bottomId)
+        {
+            UpperClothingId = upperId;
+            BottomClothingId = bottomId;
         }
         internal void UpdateInventory(List<string> itemsIds)
         {
-            //if(InventoryIds == null)
-            //    InventoryIds = new List<string>(items);
-            //else
-            //{
-            //    items.ForEach(item => { if (!CheckItemInInventory(item)) InventoryIds.Add(item); });
-            //}
             InventoryIds.Clear();
             foreach (var id in itemsIds)
             {
-                if(!InventoryIds.Contains(id))
+                if(!InventoryIds.Contains(id) && !id.Equals("default"))
                 InventoryIds.Add(id);
             }
-            Items.Instance.SetInventoryLabel(Player.PlayerItems.InventoryIds.Count);
+            Items.Instance.UpdateItems();
 
         }
         internal void UpdateCar(List<string> itemsIds)
@@ -49,21 +54,8 @@ namespace BluegravityInterviewTest.Core.Charapter
                 if(!CarIds.Contains(id))
                     CarIds.Add(id);
             }
-            Items.Instance.UpdateCarLabel(CarIds.Count);
+            Items.Instance.UpdateItems();
 
         }
-
-        //public bool CheckItemInInventory(ClothingItem item)
-        //{
-        //    foreach(ClothingItem itemInventory in InventoryIds) 
-        //    {
-        //        if(itemInventory.ID == item.ID)
-        //        {
-        //            return true;
-        //        }
-        //    }
-        //    return false;
-        //}
-
     }
 }

@@ -24,7 +24,5 @@ namespace BluegravityInterviewTest
                 _currentActionBox.Hide();
             }
         }
-
-       
     }
 }

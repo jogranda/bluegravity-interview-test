@@ -16,7 +16,7 @@ namespace BluegravityInterviewTest.UI
         {
             _messageHolder.text = message;
         }
-        public void Show(string message, int duraction)
+        public void Show(string message, float duraction)
         {
             SetDiag(message);
             transform.LeanMoveX(0, .2f).setEaseInSine();

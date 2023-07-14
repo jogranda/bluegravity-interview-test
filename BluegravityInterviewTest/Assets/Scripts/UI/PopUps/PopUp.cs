@@ -12,7 +12,10 @@ namespace BluegravityInterviewTest.UI
 
         private void Start()
         {
-            Close.onClick.AddListener(() => { Hide(); });
+            Close.onClick.AddListener(() => 
+            {
+                Hide(); 
+            });
         }
         internal virtual void Show()
         {

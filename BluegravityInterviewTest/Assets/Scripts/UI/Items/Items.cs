@@ -1,9 +1,11 @@
-﻿using System;
+﻿using BluegravityInterviewTest.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace BluegravityInterviewTest.UI.Items
@@ -18,18 +20,14 @@ namespace BluegravityInterviewTest.UI.Items
         {
             Instance = this;
         }
-        public void UpdateCarLabel(int cash)
+        private void Start()
         {
-            _carCount.text = cash.ToString();
         }
-        public void SetInventoryLabel(int inventory)
+        public void UpdateItems()
         {
-            _inventory.text = inventory.ToString();
-        }
-
-        internal void UpdateCashLabel(int count)
-        {
-            _cashCount.text = count.ToString();
+            _carCount.text = Player.PlayerData.CarIds.Count.ToString();
+            _inventory.text = Player.PlayerData.InventoryIds.Count.ToString();
+            _cashCount.text = Player.PlayerData.Cash.ToString();
         }
     }
 }

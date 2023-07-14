@@ -1,19 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-namespace BluegravityInterviewTest
+namespace BluegravityInterviewTest.Core
 {
-    public class ShopItems : MonoBehaviour
+    public class ShopItems
     {
-        public static Dictionary<string, int> ShopItemsDict = new Dictionary<string, int>()
+        public static Dictionary<string, int> ShopItemsDict { get { return GetShopItems(); } }
+        private static Dictionary<string, int> GetShopItems()
         {
-            { "8dfh2", 50 },
-            { "jsk72", 5 },
-            { "48gh5", 20 },
-            { "294hf", 30 },
-            { "gjk4h", 5 },
-            { "2hfu2", 10 }
-        };
+            Dictionary<string, int> shopItems = new Dictionary<string, int>();
+            var clothes = ClothingList.GetClotingList();
+            for (int i = 0, o = 5; i < clothes.Count; i++, o += 5)
+            {
+                shopItems[clothes[i].Id] = clothes[i].Price;
+            }
+            return shopItems;
+        }
     }
 }

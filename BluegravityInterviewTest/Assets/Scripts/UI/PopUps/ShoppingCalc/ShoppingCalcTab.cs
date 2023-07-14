@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BluegravityInterviewTest
+namespace BluegravityInterviewTest.UI
 {
     public class ShoppingCalcTab : MonoBehaviour
     {

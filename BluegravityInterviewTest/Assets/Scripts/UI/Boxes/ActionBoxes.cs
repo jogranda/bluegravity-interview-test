@@ -14,8 +14,8 @@ namespace BluegravityInterviewTest.UI
             Instance = this;
         }
 
-        public GameObject Create(string message, int duraction = 0)
-        {
+        public GameObject Create(string message, float duraction = 0)
+            {
             GameObject ActionBox = Instantiate(_actionBoxSource, _container);
             ActionBox.GetComponent<ActionBox>().Show(message, duraction);
             return ActionBox;

@@ -1,6 +1,9 @@
-using BluegravityInterviewTest.Core.Charapter;
+using BluegravityInterviewTest.Core;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.Build;
@@ -12,61 +15,87 @@ namespace BluegravityInterviewTest.UI
 {
     public class ClothingItem : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     {
-        [SerializeField] private Image _indicator;
+        [SerializeField] private Image _indicator, _upperExpo, _bottomExpo;
+        [SerializeField] private bool _interactable;
         [SerializeField] private TMP_Text _priceLabel;
+        private bool _active, _enable, _showPrice;
         private ClothingSelector _clothingSelector;
         private string _id;
         private int _price;
-        private bool _interactable;
+        private bool IsMine { get { return Player.PlayerData.InventoryIds.Contains(ID); } }
         public string ID { get { return _id; } }
         public int Price { get { return _price; } }
-        private bool _active, _isForSell;
 
         private void Awake()
         {
             _clothingSelector = transform.GetComponentInParent<ClothingSelector>();
         }
-        public void Set(string id, bool isForSell)
+        public void Set(string id, bool showPrice)
         {
             _id = id;
             _price = ShopItems.ShopItemsDict[_id];
-            _isForSell = isForSell;
+            _showPrice = showPrice;
             _interactable = true;
-            if (Player.PlayerItems.CarIds.Contains(ID) && !isForSell)
+            _enable = true;
+            
+            _priceLabel.text = _price.ToString();
+
+            ShowExpo();
+            if(id.Equals("default"))
             {
-                OnTrigger();
-                //_indicator.color = new Color(0.325f, 0.576f, 0.341f, 0.4745098f);
+                gameObject.SetActive(false);
+                return;
             }
 
-            //if(_isForSell)
-            //{
-            //    _price = _price / 2;
-            //}
-            _priceLabel.text = _price.ToString();
+            if (Player.PlayerData.CarIds.Contains(_id) || Player.PlayerData.UpperClothingId.Equals(_id) || Player.PlayerData.BottomClothingId.Equals(_id) && enabled)
+            {
+                OnTrigger();
+            }
+        }
+        private void ShowExpo()
+        {
+            var cloth = ClothingList.GetClotingList().FirstOrDefault(cloth => cloth.Id.Equals(ID));
+            switch(cloth.Type)
+            {
+                case "upper":
+                    _upperExpo.gameObject.SetActive(true);
+                    _upperExpo.color = cloth.Color;
+                    break;
+                case "bottom":
+                    _bottomExpo.gameObject.SetActive(true);
+                    _bottomExpo.color = cloth.Color;
+                    break;
+                default:
+                    break;
+            }
+            
         }
         private void Update()
         {
-            _indicator.gameObject.SetActive(false);
-            if (Player.PlayerItems.InventoryIds.Contains(ID) && !_isForSell)
+            _priceLabel.transform.parent.gameObject.SetActive(_showPrice);
+            if (!_enable)
             {
                 _interactable = false;
                 _indicator.gameObject.SetActive(true);
                 _indicator.color = new Color(0, 0, 0, 0.3f);
-            }
-            if (_clothingSelector.SelectedItems.Contains(ID))
-            {
-                _indicator.gameObject.SetActive(true);
+                return;
+            } 
                 _indicator.color = new Color(0.325f, 0.576f, 0.341f, 0.4745098f);
-            }
+                _interactable = true;
+                _indicator.gameObject.SetActive(_clothingSelector.SelectedItems.Contains(ID));
+        }
+        public void SetEnable(bool condition)
+        {
+            _enable = condition;
         }
         public void OnPointerDown(PointerEventData eventData)
         {
-            if(_interactable)
-            transform.LeanScale(Vector3.one * .9f, .3f);
+            if (_interactable)
+                transform.LeanScale(Vector3.one * .9f, .3f);
         }
         public void OnPointerUp(PointerEventData eventData)
         {
-            if(_interactable)
+            if (_interactable)
             {
                 transform.LeanScale(Vector3.one, .3f);
                 OnTrigger();
