@@ -1,1 +1,0 @@
-# bluegravity-interview-test
