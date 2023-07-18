@@ -18,7 +18,7 @@ namespace BluegravityInterviewTest.Core
         public static bool InstructionsShowed { get; set; }
 
         public static PlayerData PlayerData { get; private set; }
-        private Vector3 initialScale; // Escala inicial del objeto
+        private Vector3 initialScale;
         private Vector3 targetScale;
 
         private void Awake()
@@ -28,8 +28,6 @@ namespace BluegravityInterviewTest.Core
             PlayerData = new PlayerData();
             Camera.main.GetComponent<MainCamera>().SetTarget(transform);
             SceneManager.sceneLoaded += OnSceneLoaded;
-
-
             initialScale = transform.localScale;
             targetScale = transform.localScale;
         }
@@ -62,7 +60,7 @@ namespace BluegravityInterviewTest.Core
             switch (_currentTriggered.tag)
             {
                 case "Door":
-                    if (_currentTriggered.gameObject.transform.parent.TryGetComponent(out Build build))
+                    if (_currentTriggered.gameObject.transform.parent.TryGetComponent(out Building build))
                     {
                         if (_inRoom)
                             ActionBoxes.Instance.Create(build.name + " (press space to exit)", 1.5f);
@@ -121,7 +119,7 @@ namespace BluegravityInterviewTest.Core
                         break;
                     case "Door":
                         if (PlayerData.CarIds.Count > 0) return;
-                        _currentTriggered.gameObject.transform.parent.TryGetComponent(out Build build);
+                        _currentTriggered.gameObject.transform.parent.TryGetComponent(out Building build);
                         if (_inRoom)
                         {
                             onLoadScenePosition = build.LevingPosition;

@@ -9,7 +9,7 @@ namespace BluegravityInterviewTest.Core
 {
     public class Village : MonoBehaviour
     {
-        [SerializeField] private List<Build> _builds;
+        [SerializeField] private List<Building> _builds;
         [SerializeField] private GameObject _playerSource;
         public static Village Instance;
 
@@ -37,7 +37,7 @@ namespace BluegravityInterviewTest.Core
             yield return new WaitForSeconds(3);
             ActionBoxes.Instance.Create("Press Shift to sprint", 3);
         }
-        public void EnterBuild(Build build)
+        public void EnterBuild(Building build)
         {
             if (build.Id == BuildingNames.BuildingNamesList[0].Key)
             {
